@@ -20,7 +20,7 @@
     if (themeBtn) themeBtn.setAttribute('aria-pressed', String(theme === 'light'));
 
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0d0e12' : '#f5f3ee');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0d0e12' : '#f4ead1');
   }
 
   paintTheme(root.dataset.theme === 'light' ? 'light' : 'dark');

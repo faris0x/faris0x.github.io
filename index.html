@@ -20,6 +20,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css">
 <link rel="stylesheet" href="css/style.css">
 <script>
   /* Applied before paint so the chosen theme never flashes. */
@@ -99,9 +100,9 @@
       </p>
 
       <ul class="facts">
-        <li><b>Rust · Python · C · x86 asm</b><span>Systems, embedded, tooling</span></li>
+        <li><b><i class="devicon devicon-rust-plain colored"></i><i class="devicon devicon-python-plain colored"></i><i class="devicon devicon-c-plain colored"></i> · x86 asm</b><span>Systems, embedded, tooling</span></li>
         <li><b>Quantum Computing</b><span>Plasma language + statevector sim</span></li>
-        <li><b>From-Scratch OS</b><span>planckOS, kernel, FAT32, SMP</span></li>
+        <li><b>From-Scratch OS</b><span>Custom kernel, FAT32, SMP</span></li>
         <li><b>Mathematics</b><span>A* A-levels, university from 2027</span></li>
       </ul>
 
@@ -121,7 +122,7 @@
           <div class="tl-when">Aug 2026</div>
           <div class="tl-what">
             <h3>Placement <span class="at">Accurail</span></h3>
-            <p class="tl-where">United Kingdom</p>
+            <p class="tl-where">England</p>
             <p>Day placement at Accurail, a web and mobile platform for planning and managing Safe Work
                Packs in the rail industry, keeping them compliant with the latest regulations.</p>
             <ul class="bullets">
@@ -139,15 +140,16 @@
           <div class="tl-when">Jul 2026</div>
           <div class="tl-what">
             <h3>Work Experience <span class="at">Discover Tech</span></h3>
-            <p class="tl-where">Manchester, United Kingdom</p>
-            <p>Two-day work experience programme led by Cisco with major technology partners,
-               alongside roughly 300 students.</p>
+            <p class="tl-where">University Academy 92, Manchester, England</p>
+            <p>Two-day technology work experience programme with professionals from IBM, Accenture,
+               Cisco, Siemens, BBC, Softcat, CDW and Network Rail.</p>
             <ul class="bullets">
-              <li>Immersive workshops in programming, cybersecurity, AI and digital storytelling</li>
-              <li>Visited employer offices for insight into real-world technology careers</li>
+              <li>Spoke with employers about degree apprenticeships, applications and the skills they value</li>
+              <li>Completed a hands-on cybersecurity workshop on phishing identification, malware recognition and a Caesar cipher challenge</li>
+              <li>Designed and presented an AI chatbot concept for healthcare with Siemens, developing teamwork and presentation skills</li>
             </ul>
             <ul class="tags">
-              <li>Cisco</li><li>AI</li><li>Work Experience</li>
+              <li>Cybersecurity</li><li>AI</li><li>Presentation</li><li>Work Experience</li>
             </ul>
           </div>
         </li>
@@ -156,7 +158,7 @@
           <div class="tl-when">Apr 2026 – Aug 2026</div>
           <div class="tl-what">
             <h3>Lead Researcher <span class="at">University of Manchester · Manchester Access Programme</span></h3>
-            <p class="tl-where">Manchester, United Kingdom</p>
+            <p class="tl-where">Manchester, England</p>
             <p>Supervised research project investigating how AI systems are reshaping security in the
                modern world.</p>
             <ul class="bullets">
@@ -174,7 +176,7 @@
           <div class="tl-when">Feb 2025</div>
           <div class="tl-what">
             <h3>Work Experience <span class="at">Cisco Systems UK &amp; Ireland</span></h3>
-            <p class="tl-where">Manchester, United Kingdom</p>
+            <p class="tl-where">Manchester, England</p>
             <p>One-week work experience across Cisco's technology and business functions.</p>
             <ul class="bullets">
               <li>Dragon's Den–style pitch project presenting an inclusive technology concept to Cisco</li>
@@ -230,7 +232,7 @@
           <p>A high-level quantum computing language and deterministic statevector simulator, designed
              for planckOS. Line-based assembly-like syntax, reproducible output per seed, and backends
              from a reference interpreter to Clifford stabilizer, MPS and a PTX-only CUDA path.</p>
-          <ul class="tags"><li>Rust</li><li>Quantum</li><li>Simulation</li><li>Deterministic</li></ul>
+          <ul class="tags"><li><i class="devicon devicon-rust-plain colored"></i> Rust</li><li>Quantum</li><li>Simulation</li><li>Deterministic</li></ul>
           <span class="card-year">2026</span>
         </article>
 
@@ -238,7 +240,7 @@
           <h3><a href="https://github.com/faris0x/planckOS" target="_blank" rel="noopener">planckOS</a></h3>
           <p>A Rust-based quantum simulation OS being built entirely from scratch: custom MBR and loader,
              64-bit kernel, FAT32 driver, SMP and a REPL shell, with Plasma shipped on every release.</p>
-          <ul class="tags"><li>Rust</li><li>Assembly</li><li>Kernel</li><li>FAT32</li><li>SMP</li></ul>
+          <ul class="tags"><li><i class="devicon devicon-rust-plain colored"></i> Rust</li><li>Assembly</li><li>Kernel</li><li>FAT32</li><li>SMP</li></ul>
           <span class="card-year">2026</span>
         </article>
 
@@ -247,7 +249,7 @@
           <h3><a href="https://numcore.tech" target="_blank" rel="noopener">NumCore</a></h3>
           <p>Bare-metal scientific calculator firmware for the ARM Cortex-M3 in Rust #![no_std], with no
              OS, no allocator and no standard library, plus a deterministic Q31.32 fixed-point math engine.</p>
-          <ul class="tags"><li>Rust</li><li>no_std</li><li>Cortex-M3</li><li>Fixed-Point</li></ul>
+          <ul class="tags"><li><i class="devicon devicon-rust-plain colored"></i> Rust</li><li>no_std</li><li>Cortex-M3</li><li>Fixed-Point</li></ul>
           <span class="card-year">2025</span>
         </article>
 
@@ -256,7 +258,7 @@
           <h3><a href="https://github.com/NumCore/Tungsten" target="_blank" rel="noopener">Tungsten</a></h3>
           <p>A from-scratch mathematical platform for symbolic algebra, exact calculus and N-dimensional
              graphing, written in zero-dependency Rust. A FOSS alternative to Mathematica, WIP.</p>
-          <ul class="tags"><li>Rust</li><li>Mathematics</li><li>Symbolic Algebra</li><li>WIP</li></ul>
+          <ul class="tags"><li><i class="devicon devicon-rust-plain colored"></i> Rust</li><li>Mathematics</li><li>Symbolic Algebra</li><li>WIP</li></ul>
           <span class="card-year">2026</span>
         </article>
 
@@ -264,7 +266,7 @@
           <h3><a href="https://github.com/faris0x/muT" target="_blank" rel="noopener">μT</a></h3>
           <p>A terminal-based LaTeX editor with Micro-like editing, asynchronous pdflatex compilation,
              Zathura preview and syntax highlighting.</p>
-          <ul class="tags"><li>Rust</li><li>LaTeX</li><li>CLI</li><li>Editor</li></ul>
+          <ul class="tags"><li><i class="devicon devicon-rust-plain colored"></i> Rust</li><li><i class="devicon devicon-latex-original colored"></i> LaTeX</li><li>CLI</li><li>Editor</li></ul>
           <span class="card-year">2026</span>
         </article>
 
@@ -272,7 +274,7 @@
           <h3><a href="https://github.com/faris0x/Probability" target="_blank" rel="noopener">Probability</a></h3>
           <p>A statistical anti-cheat for Minecraft using the G-test of goodness-of-fit to catch what
              thresholds miss, with self vs world baselines, ping-bucketed and self-calibrating.</p>
-          <ul class="tags"><li>Java</li><li>Statistics</li><li>Anti-Cheat</li></ul>
+          <ul class="tags"><li><i class="devicon devicon-java-plain colored"></i> Java</li><li>Statistics</li><li>Anti-Cheat</li></ul>
           <span class="card-year">2026</span>
         </article>
 
@@ -280,8 +282,8 @@
           <h3><a href="https://github.com/faris0x" target="_blank" rel="noopener">Wizzy SMP</a></h3>
           <p>Led development of a cross-platform Minecraft server supporting Java, Bedrock and console
              editions, with backend systems, infrastructure and moderation in production.</p>
-          <ul class="tags"><li>Java</li><li>PaperSpigot</li><li>DevOps</li><li>Community</li></ul>
-          <span class="card-year">2025</span>
+          <ul class="tags"><li><i class="devicon devicon-java-plain colored"></i> Java</li><li>PaperSpigot</li><li>DevOps</li><li>Community</li></ul>
+          <span class="card-year">2024</span>
         </article>
 
       </div>
@@ -300,15 +302,15 @@
       <ul class="oss">
         <li>
           <a href="https://github.com/faris0x/vantablack-micro" target="_blank" rel="noopener">vantablack-micro</a>
-          <span>A Vantablack colorscheme for the Micro editor.</span>
+          <span><i class="icon-custom icon-micro"></i> A Vantablack colorscheme for the Micro editor.</span>
         </li>
         <li>
           <a href="https://github.com/faris0x/saturn.nvim" target="_blank" rel="noopener">saturn.nvim</a>
-          <span>Saturn theme for Neovim, forked from the original.</span>
+          <span><i class="devicon devicon-neovim-line colored"></i> Saturn theme for Neovim, forked from the original.</span>
         </li>
         <li>
           <a href="https://github.com/faris0x/omarchy-saturn-theme" target="_blank" rel="noopener">omarchy-saturn-theme</a>
-          <span>Saturn theme for Omarchy, based on the theme by Steve Lohmeyer.</span>
+          <span><i class="devicon devicon-linux-plain colored"></i> Saturn theme for Omarchy, based on the theme by Steve Lohmeyer.</span>
         </li>
       </ul>
     </section>
@@ -380,6 +382,53 @@
           <ul>
             <li>CompTIA Linux+ (in preparation)</li>
             <li>CompTIA Network+ (in preparation)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <ul>
+            <li><i class="devicon devicon-rust-plain colored"></i> Rust</li>
+            <li><i class="devicon devicon-c-plain colored"></i> C</li>
+            <li><i class="devicon devicon-python-plain colored"></i> Python</li>
+            <li><i class="devicon devicon-java-plain colored"></i> Java</li>
+            <li><i class="icon-custom icon-asm"></i> x86 Assembly</li>
+            <li><i class="devicon devicon-javascript-plain colored"></i> JavaScript</li>
+            <li><i class="devicon devicon-typescript-plain colored"></i> TypeScript</li>
+            <li><i class="devicon devicon-kotlin-plain colored"></i> Kotlin</li>
+            <li><i class="devicon devicon-lua-plain colored"></i> Lua</li>
+            <li><i class="devicon devicon-bash-plain colored"></i> Bash</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Frameworks</h3>
+          <ul>
+            <li>ratatui (TUI)</li>
+            <li>egui / eframe (GUI)</li>
+            <li>serenity + poise (Discord)</li>
+            <li>axum + sea-orm (web API)</li>
+            <li>tokio (async runtime)</li>
+            <li>Spigot / Paper API</li>
+            <li>nom (parsers)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Libraries &amp; Tooling</h3>
+          <ul>
+            <li>crossterm</li>
+            <li>sqlx / rusqlite</li>
+            <li>serde</li>
+            <li>nalgebra</li>
+            <li>rodio</li>
+            <li>ash (Vulkan)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Platforms</h3>
+          <ul>
+            <li><i class="devicon devicon-linux-plain colored"></i> Linux (Arch · Debian · Fedora)</li>
+            <li><i class="devicon devicon-windows8-plain colored"></i> Windows 7 / 10 / 11</li>
+            <li><i class="icon-custom icon-qemu"></i> QEMU (arm · x86_64)</li>
+            <li>CUDA driver API + PTX</li>
           </ul>
         </div>
         <div>

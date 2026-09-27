@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Erwin Lejeune — Robotics Software Engineer</title>
-<meta name="description" content="Erwin Lejeune — robotics software engineer working on swarm autonomy, ROS2 and real-time embedded systems.">
-<meta name="author" content="Erwin Lejeune">
+<title>Faris Alfarhan - Systems Developer &amp; Mathematician</title>
+<meta name="description" content="Faris Alfarhan - systems developer and mathematician working on bare-metal Rust, from-scratch operating systems and quantum computing.">
+<meta name="author" content="Faris Alfarhan">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#0d0e12">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Erwin Lejeune — Robotics Software Engineer">
-<meta property="og:description" content="Swarm autonomy, ROS2 and real-time embedded systems.">
+<meta property="og:title" content="Faris Alfarhan - Systems Developer &amp; Mathematician">
+<meta property="og:description" content="Bare-metal Rust, from-scratch operating systems and quantum computing.">
 <meta name="twitter:card" content="summary">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <link rel="stylesheet" href="css/style.css">
 <script>
   /* Applied before paint so the chosen theme never flashes. */
@@ -39,20 +40,14 @@
   <header class="sidebar" id="sidebar">
     <div class="sidebar-top">
       <a class="brand" href="#about">
-        <!-- The swarm mark, from guilyx/branding. Inlined rather than <img>
-             so currentColor resolves against the page. Geometry is exact:
-             regenerate with the logo-variants skill, never by hand. -->
-        <svg class="brand-mark" viewBox="0 0 32 32" role="img" aria-label="guilyx swarm mark" focusable="false">
-          <path d="M16 8.5 L8.5 21 L23.5 21 Z" fill="none" stroke="currentColor" stroke-width="1.1" opacity="0.45"/>
-          <g fill="currentColor">
-            <circle cx="16" cy="8.5" r="2.1"/>
-            <circle cx="8.5" cy="21" r="2.1"/>
-            <circle cx="23.5" cy="21" r="2.1"/>
-          </g>
+        <svg class="brand-mark" viewBox="0 0 32 32" role="img" aria-label="Faris Alfarhan mark" focusable="false">
+          <circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <circle cx="16" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="1.4" opacity="0.55"/>
+          <circle cx="16" cy="16" r="1.8" fill="currentColor"/>
         </svg>
         <span class="brand-text">
-          <b>Erwin Lejeune</b>
-          <small>Robotics Software Engineer</small>
+          <b>Faris Alfarhan</b>
+          <small>Systems Developer · Mathematics</small>
         </span>
       </a>
 
@@ -67,16 +62,16 @@
         <li><a href="#experience" data-nav><i>02</i>Experience</a></li>
         <li><a href="#projects"   data-nav><i>03</i>Projects</a></li>
         <li><a href="#open-source" data-nav><i>04</i>Open Source</a></li>
-        <li><a href="#writing"    data-nav><i>05</i>Writing</a></li>
+        <li><a href="#research"   data-nav><i>05</i>Research</a></li>
         <li><a href="#education"  data-nav><i>06</i>Education</a></li>
         <li><a href="#contact"    data-nav><i>07</i>Contact</a></li>
       </ul>
 
       <div class="sidebar-foot">
         <ul class="social">
-          <li><a href="https://github.com/Guilyx" rel="me noopener" target="_blank">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/erwinlejeune-lkn/" rel="me noopener" target="_blank">LinkedIn</a></li>
-          <li><a href="https://twitter.com/ErwinLejeune15" rel="me noopener" target="_blank">Twitter</a></li>
+          <li><a href="https://github.com/faris0x" rel="me noopener" target="_blank">GitHub</a></li>
+          <li><button class="discord-link" type="button" data-discord>Discord</button></li>
+          <li><a href="mailto:farisalfarhan@icloud.com">Email</a></li>
         </ul>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
           <span class="theme-dot" aria-hidden="true"></span>
@@ -91,31 +86,28 @@
 
     <!-- ABOUT -->
     <section id="about" class="section hero">
-      <p class="eyebrow">Abu Dhabi, UAE · <span class="pulse" aria-hidden="true"></span> open to talk</p>
-      <h1>I build the software that<br>makes robots <em>decide</em>.</h1>
+      <p class="eyebrow">Greater Manchester, UK · <span class="pulse" aria-hidden="true"></span> open to opportunities</p>
+      <h1>I write the systems and the mathematics<br>behind <em>quantum computing</em>.</h1>
       <p class="lede">
-        Robotics software engineer, currently at the <b>Technology Innovation Institute</b> working on
-        decentralised autonomy for drone swarms. Before that I was on the founding team of a mobile
-        robotics startup in Denmark, shipping a robot that ran 24/7 in a live retail store.
+        Systems developer and mathematician. I'm building <b>planckOS</b>, a from-scratch x86_64
+        operating system, and <b>Plasma</b>, the quantum computing language and deterministic simulator
+        that runs inside it. I start Mathematics at university in 2027.
       </p>
       <p class="body">
-        I like the parts of robotics where the theory has to survive contact with hardware —
-        real-time control, sensor fusion, multi-agent planning, and the unglamorous integration work
-        that turns a paper into something that actually flies. I came to it through embedded systems,
-        so I am just as happy writing an STM32 peripheral driver as a ROS2 planner. Most of what I
-        learn ends up on GitHub.
+        Most of my work sits low in the stack: bare-metal firmware, custom bootloaders, kernels,
+        fixed-point arithmetic, and deterministic simulation. I try to publish what I learn on GitHub.
       </p>
 
       <ul class="facts">
-        <li><b>ROS · ROS2</b><span>Navigation, control, tooling</span></li>
-        <li><b>C++ · Python</b><span>Plus Go, VHDL, a little Julia</span></li>
-        <li><b>Real-Time</b><span>Xenomai, RTOS, STM32, micro-ROS</span></li>
-        <li><b>Multi-Agent</b><span>MAPF, PDDL planning, flocking</span></li>
+        <li><b>Rust · Python · C · x86 asm</b><span>Systems, embedded, tooling</span></li>
+        <li><b>Quantum Computing</b><span>Plasma language + statevector sim</span></li>
+        <li><b>From-Scratch OS</b><span>planckOS, kernel, FAT32, SMP</span></li>
+        <li><b>Mathematics</b><span>A* A-levels, university from 2027</span></li>
       </ul>
 
       <p class="cta">
         <a class="btn btn-primary" href="#projects">See the work</a>
-        <a class="btn" href="mailto:erwin.lejeune15@gmail.com">Get in touch</a>
+        <a class="btn" href="mailto:farisalfarhan@icloud.com">Get in touch</a>
       </p>
     </section>
 
@@ -126,121 +118,88 @@
       <ol class="timeline">
 
         <li class="tl-item">
-          <div class="tl-when">Nov 2022 — Present</div>
+          <div class="tl-when">Aug 2026</div>
           <div class="tl-what">
-            <h3>Robotics Software Engineer <span class="at">Technology Innovation Institute</span></h3>
-            <p class="tl-where">Abu Dhabi, United Arab Emirates</p>
-            <p>Decentralised autonomy frameworks for drone swarms on ROS2 — core algorithms plus the
-               system integration that gets them off the bench and into outdoor field trials.</p>
+            <h3>Placement <span class="at">Accurail</span></h3>
+            <p class="tl-where">United Kingdom</p>
+            <p>Day placement at Accurail, a web and mobile platform for planning and managing Safe Work
+               Packs in the rail industry, keeping them compliant with the latest regulations.</p>
             <ul class="bullets">
-              <li>Building the flocking and coordination stack for medium-sized UAVs</li>
-              <li>ROS2 tooling and dashboards for monitoring swarm autonomy in flight</li>
+              <li>Worked on UX for the Accurail platform</li>
+              <li>Learned about the work environment and how a product team operates day to day</li>
+              <li>Gained insight into rail safety compliance and SWP workflows</li>
             </ul>
             <ul class="tags">
-              <li>ROS2</li><li>C++</li><li>Python</li><li>PX4</li><li>Betaflight</li><li>Swarm Robotics</li><li>ReactJS</li>
+              <li>UX</li><li>Product</li><li>Rail</li><li>Compliance</li>
             </ul>
           </div>
         </li>
 
         <li class="tl-item">
-          <div class="tl-when">Mar 2021 — Nov 2022</div>
+          <div class="tl-when">Jul 2026</div>
           <div class="tl-what">
-            <h3>Founding Robotics Engineer <span class="at">Coalescent Mobile Robotics</span></h3>
-            <p class="tl-where">Odense, Denmark</p>
-            <p>Founding team member. Owned navigation and perception on an indoor service robot,
-               from the embedded layer up to the autonomy stack.</p>
+            <h3>Work Experience <span class="at">Discover Tech</span></h3>
+            <p class="tl-where">Manchester, United Kingdom</p>
+            <p>Two-day work experience programme led by Cisco with major technology partners,
+               alongside roughly 300 students.</p>
             <ul class="bullets">
-              <li>Delivered the first robot system running 24/7 in-store at Bilka Odense</li>
-              <li>Ran the demonstrations that led to the $1.7M pre-seed round in 2021</li>
-              <li>Mentored three interns and junior engineers</li>
+              <li>Immersive workshops in programming, cybersecurity, AI and digital storytelling</li>
+              <li>Visited employer offices for insight into real-world technology careers</li>
             </ul>
             <ul class="tags">
-              <li>ROS2</li><li>C++</li><li>Python</li><li>STM32</li><li>micro-ROS</li><li>Navigation</li><li>Sensor Fusion</li><li>EKF</li>
+              <li>Cisco</li><li>AI</li><li>Work Experience</li>
             </ul>
           </div>
         </li>
 
         <li class="tl-item">
-          <div class="tl-when">Jun 2020 — Feb 2021</div>
+          <div class="tl-when">Apr 2026 – Aug 2026</div>
           <div class="tl-what">
-            <h3>Software Engineer <span class="at">Hiventive</span></h3>
-            <p class="tl-where">Remote</p>
-            <p>Backend work on a web platform for computer-aided production engineering.</p>
+            <h3>Lead Researcher <span class="at">University of Manchester · Manchester Access Programme</span></h3>
+            <p class="tl-where">Manchester, United Kingdom</p>
+            <p>Supervised research project investigating how AI systems are reshaping security in the
+               modern world.</p>
             <ul class="bullets">
-              <li>Core backend services in Golang, backed by PostgreSQL and Docker</li>
-              <li>Automated programming-test manager used to evaluate candidates</li>
+              <li>Investigating how publicly accessible large language models can be exploited for phishing, malware development and social engineering</li>
+              <li>Analysing the role of AI in defensive security, including threat detection, network monitoring and automated vulnerability assessment</li>
+              <li>Building academic research, technical writing and critical analysis skills</li>
             </ul>
             <ul class="tags">
-              <li>Golang</li><li>PostgreSQL</li><li>Docker</li><li>CI/CD</li><li>GitLab</li><li>TypeScript</li>
+              <li>Research</li><li>AI</li><li>LLM Security</li><li>Technical Writing</li>
             </ul>
           </div>
         </li>
 
         <li class="tl-item">
-          <div class="tl-when">Mar 2020 — Feb 2021</div>
+          <div class="tl-when">Feb 2025</div>
           <div class="tl-what">
-            <h3>Robotics Researcher <span class="at">École Centrale de Nantes</span></h3>
-            <p class="tl-where">Nantes, France</p>
-            <p>Led four projects spanning multi-agent systems, AI planning, real-time control and
-               ROS2 benchmarking. Two of them turned into papers.</p>
+            <h3>Work Experience <span class="at">Cisco Systems UK &amp; Ireland</span></h3>
+            <p class="tl-where">Manchester, United Kingdom</p>
+            <p>One-week work experience across Cisco's technology and business functions.</p>
             <ul class="bullets">
-              <li>MAPF survey and simulator — categorised and implemented the main algorithm families</li>
-              <li>PDDL parser and solver with A*, Dijkstra and BFS search</li>
-              <li>Real-time ROS controller built on Xenomai and XDDP</li>
-              <li>ROS2 benchmarking tools for latency and jitter visualisation</li>
+              <li>Dragon's Den–style pitch project presenting an inclusive technology concept to Cisco</li>
+              <li>Attended meetings alongside Sarah Walker, CEO Cisco UK &amp; Ireland</li>
+              <li>Learned about workplace dynamics, career development and Cisco Networking Academy</li>
             </ul>
             <ul class="tags">
-              <li>Python</li><li>C++</li><li>ROS2</li><li>Xenomai</li><li>PDDL</li><li>MAPF</li><li>Real-Time</li><li>Julia</li>
+              <li>Cisco</li><li>Teamwork</li><li>Presentation</li>
             </ul>
           </div>
         </li>
 
         <li class="tl-item">
-          <div class="tl-when">Jul 2019 — Sep 2019</div>
+          <div class="tl-when">Oct 2024 – Nov 2024</div>
           <div class="tl-what">
-            <h3>Robotics Assistant <span class="at">Ingeniarius</span></h3>
-            <p class="tl-where">Coimbra, Portugal</p>
-            <p>Built full autonomy stacks from scratch on ROS and embedded hardware during an
-               intensive training programme, and finished it with top honours.</p>
+            <h3>Repair Technician <span class="at">Hitec Computers</span></h3>
+            <p class="tl-where">Stockport, Greater Manchester, UK</p>
+            <p>Assisted and led diagnostics and repair of customer devices and electronics.</p>
             <ul class="bullets">
-              <li>Won both the mapped and unmapped maze-solving competitions</li>
-              <li>Wrote the embedded drivers and the navigation stack that ran on top of them</li>
+              <li>Diagnosed and repaired customer hardware, developing practical technical skills</li>
+              <li>Documented financial transactions and service records accurately</li>
+              <li>Communicated diagnostic findings clearly to customers and handled technical inquiries</li>
             </ul>
             <ul class="tags">
-              <li>ROS</li><li>C++</li><li>Arduino</li><li>Raspberry Pi</li><li>IR Sensors</li><li>Motor Drivers</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="tl-item">
-          <div class="tl-when">Sep 2018 — Jul 2019</div>
-          <div class="tl-what">
-            <h3>Embedded Software Engineer <span class="at">Hiventive</span></h3>
-            <p class="tl-where">Bordeaux, France</p>
-            <p>SystemC/TLM virtual prototype of an STM32 microcontroller, used for SoC emulation and
-               firmware validation without touching real silicon.</p>
-            <ul class="bullets">
-              <li>Emulated TIM, I2C, CAN, GPIO and USART peripherals, integrated with QEMU</li>
-              <li>Built a virtual temperature/humidity sensor and validated firmware against hardware</li>
-            </ul>
-            <ul class="tags">
-              <li>SystemC</li><li>TLM</li><li>C++</li><li>STM32</li><li>QEMU</li><li>I2C</li><li>CAN</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="tl-item">
-          <div class="tl-when">May 2018 — Jul 2018</div>
-          <div class="tl-what">
-            <h3>Robotics Intern <span class="at">Polytech Nantes — LS2N</span></h3>
-            <p class="tl-where">Nantes, France</p>
-            <p>Assembled a TurtleBot3 and used it to test indoor localisation from WiFi signal strength.</p>
-            <ul class="bullets">
-              <li>RSSI-based mesh triangulation algorithm for indoor positioning</li>
-              <li>Benchmarked it against odometry and sensor fusion baselines</li>
-            </ul>
-            <ul class="tags">
-              <li>ROS</li><li>TurtleBot3</li><li>Python</li><li>WiFi RSSI</li>
+              <li>Diagnostics</li><li>Repair</li><li>Customer Service</li>
             </ul>
           </div>
         </li>
@@ -252,183 +211,77 @@
     <section id="projects" class="section">
       <h2 class="section-title"><i>03</i>Projects</h2>
       <p class="section-lede">
-        Things I built because I wanted to understand them. Mostly robotics and embedded, with the
-        occasional detour.
+        Things I'm building because I want to understand the bottom of the stack, starting with Plasma,
+        the quantum language, and the operating system that ships it.
       </p>
 
       <div class="filters" role="group" aria-label="Filter projects by category">
         <button type="button" class="chip is-active" data-filter="all">All</button>
-        <button type="button" class="chip" data-filter="robotics">Robotics</button>
+        <button type="button" class="chip" data-filter="quantum">Quantum</button>
         <button type="button" class="chip" data-filter="embedded">Embedded</button>
-        <button type="button" class="chip" data-filter="ml">ML &amp; Vision</button>
         <button type="button" class="chip" data-filter="software">Software</button>
       </div>
 
       <div class="grid" id="project-grid">
 
-        <!-- robotics -->
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/APLA-Toolbox/pymapf" target="_blank" rel="noopener">PyMAPF</a></h3>
-          <p>Multi-Agent Path Finding algorithms in Python — planning collision-free paths for fleets of agents, with a simulator to watch them fail interestingly.</p>
-          <ul class="tags"><li>Python</li><li>MAPF</li><li>Path Planning</li></ul>
-          <span class="card-year">2021</span>
+        <!-- quantum -->
+        <article class="card" data-cat="quantum">
+          <h3><a href="https://github.com/faris0x/Plasma" target="_blank" rel="noopener">Plasma</a></h3>
+          <p>A high-level quantum computing language and deterministic statevector simulator, designed
+             for planckOS. Line-based assembly-like syntax, reproducible output per seed, and backends
+             from a reference interpreter to Clifford stabilizer, MPS and a PTX-only CUDA path.</p>
+          <ul class="tags"><li>Rust</li><li>Quantum</li><li>Simulation</li><li>Deterministic</li></ul>
+          <span class="card-year">2026</span>
         </article>
 
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/APLA-Toolbox/pythonpddl" target="_blank" rel="noopener">PythonPDDL</a></h3>
-          <p>A PDDL parser and solver wired to classic search algorithms and domain-independent heuristics, for automated planning experiments.</p>
-          <ul class="tags"><li>Python</li><li>PDDL</li><li>AI Planning</li></ul>
-          <span class="card-year">2021</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/guilyx/autonomous-uav" target="_blank" rel="noopener">Autonomous UAV</a></h3>
-          <p>2D and 3D path planning, a cascaded attitude/position controller and an extended Kalman filter, built through the Udacity Flying Cars programme.</p>
-          <ul class="tags"><li>Python</li><li>C++</li><li>Control</li><li>EKF</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/mastererts/ros_xenomai_bridge" target="_blank" rel="noopener">ROS ↔ Xenomai XDDP Bridge</a></h3>
-          <p>A ROS stack wrapping Xenomai's XDDP protocol in usable C++ classes, with echo and navigation demos showing real-time and non-real-time domains talking.</p>
-          <ul class="tags"><li>ROS</li><li>Xenomai</li><li>C++</li><li>Real-Time</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/mastererts/ros2_realtime_statistics" target="_blank" rel="noopener">ROS2 Real-Time Statistics</a></h3>
-          <p>Converts ROS2 real-time statistics topics into JSON, then into plots. Built to measure jitter on an inverted pendulum, and it became a paper.</p>
-          <ul class="tags"><li>ROS2</li><li>Python</li><li>Real-Time</li><li>Data Analysis</li></ul>
-          <span class="card-year">2021</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/robotcraft19" target="_blank" rel="noopener">Amazebot</a></h3>
-          <p>Full stack for a differential-drive robot — Arduino firmware, ROS driver and a pathfinding layer that solved both mapped and unmapped mazes.</p>
-          <ul class="tags"><li>ROS</li><li>C++</li><li>Arduino</li><li>Pathfinding</li></ul>
-          <span class="card-year">2019</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/Guilyx" target="_blank" rel="noopener">Bird Swarm</a></h3>
-          <p>A scalable flocking simulation in ROS: a leader publishes its pose, followers subscribe and track it under a P controller. The seed of what I do now.</p>
-          <ul class="tags"><li>ROS</li><li>C++</li><li>Swarms</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/master-coro/mobile-robot-sim" target="_blank" rel="noopener">Differential Robot Simulator</a></h3>
-          <p>Wheeled robot simulator with sensor bearing, robot following and obstacle avoidance — all of it plotted with matplotlib, no game engine involved.</p>
-          <ul class="tags"><li>C++</li><li>Motion Control</li><li>Sensor Fusion</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/mastererts/dual_arm" target="_blank" rel="noopener">Dual Planar Arm</a></h3>
-          <p>A ROS stack that drives one planar arm from another's motion, leaning on tf and services for the coordinate gymnastics.</p>
-          <ul class="tags"><li>ROS</li><li>Python</li><li>Manipulation</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/master-coro/artin-pathfinding" target="_blank" rel="noopener">Pathfinding Algorithms</a></h3>
-          <p>A*, DFS, Dijkstra, BFS, bidirectional A* and spanning-tree search over grids, rendered with matplotlib or straight in the terminal.</p>
-          <ul class="tags"><li>Python</li><li>Graph Search</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="robotics">
-          <h3><a href="https://github.com/masterets/xenomai-latency-plotter" target="_blank" rel="noopener">Xenomai Latency Plotter</a></h3>
-          <p>Scripts that turn Xenomai's latency test and cyclictest output into readable plots, so real-time regressions stop hiding in log files.</p>
-          <ul class="tags"><li>Python</li><li>Xenomai</li><li>Statistics</li></ul>
-          <span class="card-year">2020</span>
+        <article class="card" data-cat="quantum">
+          <h3><a href="https://github.com/faris0x/planckOS" target="_blank" rel="noopener">planckOS</a></h3>
+          <p>A Rust-based quantum simulation OS being built entirely from scratch: custom MBR and loader,
+             64-bit kernel, FAT32 driver, SMP and a REPL shell, with Plasma shipped on every release.</p>
+          <ul class="tags"><li>Rust</li><li>Assembly</li><li>Kernel</li><li>FAT32</li><li>SMP</li></ul>
+          <span class="card-year">2026</span>
         </article>
 
         <!-- embedded -->
         <article class="card" data-cat="embedded">
-          <h3><a href="https://github.com/guilyx/gantt-trampoline" target="_blank" rel="noopener">GANTT Generator for RTOS Traces</a></h3>
-          <p>Generates Gantt diagrams from TrampolineRTOS execution traces — or from hand-written task sets — to make scheduling behaviour visible.</p>
-          <ul class="tags"><li>Python</li><li>RTOS</li><li>Trampoline</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="embedded">
-          <h3><a href="https://github.com/LavergneC/Cpp-Osciloscope" target="_blank" rel="noopener">Homemade Oscilloscope</a></h3>
-          <p>An STM32 samples a signal generator and streams it over UART to a Qt desktop app that draws the trace. C, C++ and a lot of patience with baud rates.</p>
-          <ul class="tags"><li>C</li><li>C++</li><li>Qt</li><li>STM32</li></ul>
-          <span class="card-year">2019</span>
-        </article>
-
-        <article class="card" data-cat="embedded">
-          <h3><a href="https://github.com/master-coro/micro-stm32f3" target="_blank" rel="noopener">HC-SR04 Ultrasonic Driver</a></h3>
-          <p>Ultrasonic range sensor driver for the STM32F3 on an Arduino-like abstraction layer, implemented twice — polling and interrupt-driven — to compare them.</p>
-          <ul class="tags"><li>Embedded C</li><li>C++</li><li>STM32</li></ul>
-          <span class="card-year">2019</span>
-        </article>
-
-        <article class="card" data-cat="embedded">
-          <h3><a href="https://github.com/master-coro/mcp23s17-spi-driver" target="_blank" rel="noopener">MCP23S17 I/O Expander Driver</a></h3>
-          <p>SPI driver for the MCP23S17 port expander, wrapped in Arduino-style abstractions so using it doesn't require the datasheet open on a second screen.</p>
-          <ul class="tags"><li>Embedded C</li><li>SPI</li><li>STM32</li></ul>
-          <span class="card-year">2019</span>
-        </article>
-
-        <article class="card" data-cat="embedded">
-          <h3><a href="https://github.com/master-coro/embel-calculator" target="_blank" rel="noopener">Calculator on CPLD</a></h3>
-          <p>A VHDL calculator — addition, subtraction and product — described and synthesised onto a CPLD.</p>
-          <ul class="tags"><li>VHDL</li><li>FPGA</li><li>Digital Design</li></ul>
-          <span class="card-year">2018</span>
-        </article>
-
-        <!-- ml -->
-        <article class="card" data-cat="ml">
-          <h3><a href="https://github.com/master-coro/mnist-digit-recognition" target="_blank" rel="noopener">MNIST Net from Scratch</a></h3>
-          <p>A fully connected network for MNIST written in pure NumPy — forward pass, backprop and all — because frameworks hide the interesting part.</p>
-          <ul class="tags"><li>Python</li><li>NumPy</li><li>Deep Learning</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="ml">
-          <h3><a href="https://github.com/master-coro/cv-object-tracking" target="_blank" rel="noopener">Object Tracking with OpenCV</a></h3>
-          <p>Click an object in the camera feed and the tracker follows it. Built with OpenCV and ViSP while learning visual servoing.</p>
-          <ul class="tags"><li>C++</li><li>OpenCV</li><li>ViSP</li></ul>
-          <span class="card-year">2020</span>
-        </article>
-
-        <article class="card" data-cat="ml">
-          <h3><a href="https://github.com/Guilyx/neural-network-logicgates" target="_blank" rel="noopener">Logic Gates Neural Network</a></h3>
-          <p>A neural network with no libraries at all, trained to reproduce the truth tables of logic gates. The smallest useful thing you can build twice.</p>
-          <ul class="tags"><li>Python</li><li>NumPy</li><li>OOP</li></ul>
-          <span class="card-year">2019</span>
+          <h3><a href="https://numcore.tech" target="_blank" rel="noopener">NumCore</a></h3>
+          <p>Bare-metal scientific calculator firmware for the ARM Cortex-M3 in Rust #![no_std], with no
+             OS, no allocator and no standard library, plus a deterministic Q31.32 fixed-point math engine.</p>
+          <ul class="tags"><li>Rust</li><li>no_std</li><li>Cortex-M3</li><li>Fixed-Point</li></ul>
+          <span class="card-year">2025</span>
         </article>
 
         <!-- software -->
         <article class="card" data-cat="software">
-          <h3><a href="https://github.com/guilyx/secret-santa" target="_blank" rel="noopener">Secret Santa</a></h3>
-          <p>Draws the pool from a list of names and emails, mails everyone their target, then deletes and flushes the sent folder so the organiser can play too.</p>
-          <ul class="tags"><li>Python</li><li>IMAP</li></ul>
-          <span class="card-year">2020</span>
+          <h3><a href="https://github.com/NumCore/Tungsten" target="_blank" rel="noopener">Tungsten</a></h3>
+          <p>A from-scratch mathematical platform for symbolic algebra, exact calculus and N-dimensional
+             graphing, written in zero-dependency Rust. A FOSS alternative to Mathematica, WIP.</p>
+          <ul class="tags"><li>Rust</li><li>Mathematics</li><li>Symbolic Algebra</li><li>WIP</li></ul>
+          <span class="card-year">2026</span>
         </article>
 
         <article class="card" data-cat="software">
-          <h3><a href="https://github.com/Guilyx/pandemic-dataviz" target="_blank" rel="noopener">Epidemic Simulation</a></h3>
-          <p>An agent-based epidemic simulation on a configurable grid with tunable transmission rates, recording and plotting statistics as it runs.</p>
-          <ul class="tags"><li>Python</li><li>Dataviz</li><li>Simulation</li></ul>
-          <span class="card-year">2020</span>
+          <h3><a href="https://github.com/faris0x/muT" target="_blank" rel="noopener">μT</a></h3>
+          <p>A terminal-based LaTeX editor with Micro-like editing, asynchronous pdflatex compilation,
+             Zathura preview and syntax highlighting.</p>
+          <ul class="tags"><li>Rust</li><li>LaTeX</li><li>CLI</li><li>Editor</li></ul>
+          <span class="card-year">2026</span>
         </article>
 
         <article class="card" data-cat="software">
-          <h3><a href="https://github.com/guilyx/battletext" target="_blank" rel="noopener">Battle Text — CLI RPG</a></h3>
-          <p>A turn-based role-playing game in the terminal, written mostly as an excuse to get object-oriented design wrong a few times and then right.</p>
-          <ul class="tags"><li>Python</li><li>CLI</li><li>Games</li></ul>
-          <span class="card-year">2019</span>
+          <h3><a href="https://github.com/faris0x/Probability" target="_blank" rel="noopener">Probability</a></h3>
+          <p>A statistical anti-cheat for Minecraft using the G-test of goodness-of-fit to catch what
+             thresholds miss, with self vs world baselines, ping-bucketed and self-calibrating.</p>
+          <ul class="tags"><li>Java</li><li>Statistics</li><li>Anti-Cheat</li></ul>
+          <span class="card-year">2026</span>
         </article>
 
         <article class="card" data-cat="software">
-          <h3><a href="https://github.com/guilyx/airplane-booking" target="_blank" rel="noopener">Airplane Tickets Booker</a></h3>
-          <p>A flight booking system grown out of a linked-list exercise, with a Tkinter GUI that is honestly quite ugly and an expandable set of routes.</p>
-          <ul class="tags"><li>Python</li><li>Tkinter</li><li>Data Structures</li></ul>
-          <span class="card-year">2019</span>
+          <h3><a href="https://github.com/faris0x" target="_blank" rel="noopener">Wizzy SMP</a></h3>
+          <p>Led development of a cross-platform Minecraft server supporting Java, Bedrock and console
+             editions, with backend systems, infrastructure and moderation in production.</p>
+          <ul class="tags"><li>Java</li><li>PaperSpigot</li><li>DevOps</li><li>Community</li></ul>
+          <span class="card-year">2025</span>
         </article>
 
       </div>
@@ -440,73 +293,40 @@
     <section id="open-source" class="section">
       <h2 class="section-title"><i>04</i>Open Source</h2>
       <p class="section-lede">
-        Projects I contribute to rather than own. Issues, fixes, algorithms and the occasional
-        bug report that turned into a long conversation.
+        Themes, ports and public tooling I keep on GitHub. Small projects I'm building to make the
+        systems I use every day feel like mine.
       </p>
 
       <ul class="oss">
         <li>
-          <a href="https://github.com/AtsushiSakai/PythonRobotics" target="_blank" rel="noopener">PythonRobotics</a>
-          <span>Added BFS, DFS, greedy best-first, bidirectional A*, bidirectional BFS and bidirectional best-first search. Ranked #3 in additions and #3 in commits.</span>
+          <a href="https://github.com/faris0x/vantablack-micro" target="_blank" rel="noopener">vantablack-micro</a>
+          <span>A Vantablack colorscheme for the Micro editor.</span>
         </li>
         <li>
-          <a href="https://github.com/ros-navigation/navigation2" target="_blank" rel="noopener">Navigation2</a>
-          <span>The ROS2 navigation stack — path planning, localisation and recovery behaviours for mobile robots.</span>
+          <a href="https://github.com/faris0x/saturn.nvim" target="_blank" rel="noopener">saturn.nvim</a>
+          <span>Saturn theme for Neovim, forked from the original.</span>
         </li>
         <li>
-          <a href="https://github.com/PlotJuggler/plotjuggler-ros-plugins" target="_blank" rel="noopener">PlotJuggler ROS Plugins</a>
-          <span>ROS plugins for the time-series visualiser most roboticists end up living inside.</span>
-        </li>
-        <li>
-          <a href="https://github.com/TheAlgorithms/Python" target="_blank" rel="noopener">TheAlgorithms / Python</a>
-          <span>Contributed optimised graph search — bidirectional A*, bidirectional BFS, greedy best-first.</span>
-        </li>
-        <li>
-          <a href="https://github.com/renode" target="_blank" rel="noopener">Renode</a>
-          <span>SoC simulation framework. Reported and fixed redundant checks in the I2C register model.</span>
-        </li>
-        <li>
-          <a href="https://github.com/TrampolineRTOS" target="_blank" rel="noopener">TrampolineRTOS</a>
-          <span>Real-time OS built by academia at Centrale Nantes. Raised issues, reported bugs, contributed examples and tooling.</span>
-        </li>
-        <li>
-          <a href="https://github.com/belyalov/stm32-hal-libraries" target="_blank" rel="noopener">stm32-hal-libraries</a>
-          <span>Fixed a checksum bug and added tests for a temperature/humidity sensor driver.</span>
-        </li>
-        <li>
-          <a href="https://github.com/ros-tooling/setup-ros" target="_blank" rel="noopener">ros-tooling / setup-ros</a>
-          <span>GitHub Action maintained by the AWS RoboMaker team. Flagged broken packages in the Melodic distro install.</span>
-        </li>
-        <li>
-          <a href="https://github.com/mithi/hexapod-robot-simulator" target="_blank" rel="noopener">Hexapod Robot Simulator</a>
-          <span>Worked through open issues and reported bugs in the kinematics.</span>
+          <a href="https://github.com/faris0x/omarchy-saturn-theme" target="_blank" rel="noopener">omarchy-saturn-theme</a>
+          <span>Saturn theme for Omarchy, based on the theme by Steve Lohmeyer.</span>
         </li>
       </ul>
     </section>
 
-    <!-- WRITING -->
-    <section id="writing" class="section">
-      <h2 class="section-title"><i>05</i>Writing</h2>
+    <!-- RESEARCH -->
+    <section id="research" class="section">
+      <h2 class="section-title"><i>05</i>Research</h2>
 
       <ul class="papers">
         <li>
-          <div class="paper-year">Mar 2021</div>
+          <div class="paper-year">Apr 2026 – Aug 2026</div>
           <div>
-            <h3><a href="https://www.researchgate.net/publication/350353690_Real-time_Jitter_Measurements_under_ROS2_the_Inverted_Pendulum_case" target="_blank" rel="noopener">Real-time Jitter Measurements under ROS2: the Inverted Pendulum case</a></h3>
-            <p>ROS2 promises built-in real-time capability for safety-critical systems, but the guarantee
-               depends on what sits underneath it. This paper measures how much the operating system
-               (general-purpose vs real-time) and the platform (desktop vs embedded) actually move the
-               jitter numbers, using an inverted pendulum as the thing that falls over when they're wrong.</p>
-          </div>
-        </li>
-        <li>
-          <div class="paper-year">Jan 2021</div>
-          <div>
-            <h3><a href="https://www.researchgate.net/publication/348716625_Survey_of_the_Multi-Agent_Pathfinding_Solutions" target="_blank" rel="noopener">Survey of the Multi-Agent Pathfinding Solutions</a></h3>
-            <p>Multi-Agent Path Finding is the problem of routing many agents at once without letting them
-               hit each other or the world. This survey walks through the solution families — coupled,
-               decoupled, and the hybrids in between — and compares them on the terms that matter for
-               warehouses and drone delivery.</p>
+            <h3>AI Systems and Security</h3>
+            <p>Supervised research under the University of Manchester's Manchester Access Programme.
+               It asks how publicly accessible large language models can be exploited for cybercrime
+               such as phishing, malware development and social engineering, and whether the same models
+               are becoming the most effective defensive tool we have, from threat detection to automated
+               vulnerability assessment.</p>
           </div>
         </li>
       </ul>
@@ -518,63 +338,63 @@
 
       <ul class="edu">
         <li>
-          <div class="edu-when">2019 — 2021</div>
+          <div class="edu-when">2027 – 2030</div>
           <div>
-            <h3>MSc, Control and Robotics</h3>
-            <p class="edu-where">École Centrale de Nantes — Nantes, France</p>
-            <p>Multi-agent systems, real-time control, AI planning. Four project deliverables that became
-               the MAPF survey, the PDDL solver, the Xenomai controller and the ROS2 benchmarking tools.</p>
+            <h3>BSc Mathematics</h3>
+            <p class="edu-where">University, starting Sep 2027</p>
+            <p>Studying Mathematics at university from next year.</p>
           </div>
         </li>
         <li>
-          <div class="edu-when">2019</div>
+          <div class="edu-when">2025 – 2027</div>
           <div>
-            <h3>Summer School, Robotics</h3>
-            <p class="edu-where">Universidade de Coimbra — Coimbra, Portugal</p>
-            <p>Autonomy stacks from scratch on ROS and embedded hardware. Finished with top honours and
-               two maze-solving competition wins.</p>
+            <h3>A-Levels: Computer Science, Mathematics, Further Mathematics</h3>
+            <p class="edu-where">Manchester, UK</p>
+            <p>Predicted A in Computer Science (OCR), A* in Mathematics (Edexcel) and A* in Further
+               Mathematics (Edexcel).</p>
           </div>
         </li>
         <li>
-          <div class="edu-when">2018 — 2019</div>
+          <div class="edu-when">Jun 2025 – Present</div>
           <div>
-            <h3>MSc, Computer Engineering</h3>
-            <p class="edu-where">Bordeaux Ynov Campus — Bordeaux, France</p>
-            <p>Embedded systems and virtual prototyping — SystemC/TLM models of STM32 peripherals,
-               validated against real firmware.</p>
+            <h3>Course in Mastery of Cybersecurity Techniques and Practices</h3>
+            <p class="edu-where">Remote</p>
+            <p>Offensive and defensive security across the modern threat landscape, in preparation for
+               CompTIA Linux+ and CompTIA Network+.</p>
           </div>
         </li>
         <li>
-          <div class="edu-when">2015 — 2018</div>
+          <div class="edu-when">2023 – 2025</div>
           <div>
-            <h3>BSc, Electrical, Electronics and Communications Engineering</h3>
-            <p class="edu-where">Université de Nantes — Nantes, France</p>
-            <p>Electronics, signal processing and communication systems — the groundwork for everything above.</p>
+            <h3>GCSEs</h3>
+            <p class="edu-where">Manchester, UK</p>
+            <p>9 in Mathematics and Arabic; 8 in Computer Science; 7 in French and Drama; 6 across
+               Further Mathematics, English Literature, English Language, Biology, Chemistry and Physics.</p>
           </div>
         </li>
       </ul>
 
       <div class="odds">
         <div>
-          <h3>Honours</h3>
+          <h3>Certifications</h3>
           <ul>
-            <li>Robotcraft 2019 — winner</li>
-            <li>Sci-fi short story contest — winner</li>
+            <li>CompTIA Linux+ (in preparation)</li>
+            <li>CompTIA Network+ (in preparation)</li>
           </ul>
         </div>
         <div>
-          <h3>Certifications</h3>
+          <h3>Skills</h3>
           <ul>
-            <li>Udacity — Autonomous Flight Nanodegree</li>
-            <li>ROS MeetUp</li>
-            <li>TOEIC</li>
+            <li>Systems, kernel and embedded development</li>
+            <li>Numerical and deterministic design</li>
+            <li>Low-level debugging and optimisation</li>
           </ul>
         </div>
         <div>
           <h3>Off the clock</h3>
           <ul>
-            <li>Basketball, badly but often</li>
-            <li>Writing short fiction</li>
+            <li>Chess and competitive problem solving</li>
+            <li>Kickboxing and fitness</li>
             <li>Reading other people's commit history</li>
           </ul>
         </div>
@@ -585,25 +405,34 @@
     <section id="contact" class="section">
       <h2 class="section-title"><i>07</i>Contact</h2>
       <p class="section-lede">
-        Robotics, real-time systems, or something that should not work but does — happy to talk.
+        Low-level systems, mathematics, or a project that should not work but does. Happy to talk.
       </p>
 
       <ul class="contact">
-        <li><span>Email</span><a href="mailto:erwin.lejeune15@gmail.com">erwin.lejeune15@gmail.com</a></li>
-        <li><span>GitHub</span><a href="https://github.com/Guilyx" target="_blank" rel="noopener">github.com/Guilyx</a></li>
-        <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/erwinlejeune-lkn/" target="_blank" rel="noopener">in/erwinlejeune-lkn</a></li>
-        <li><span>Twitter</span><a href="https://twitter.com/ErwinLejeune15" target="_blank" rel="noopener">@ErwinLejeune15</a></li>
+        <li><span>Email</span><a href="mailto:farisalfarhan@icloud.com">farisalfarhan@icloud.com</a></li>
+        <li><span>GitHub</span><a href="https://github.com/faris0x" target="_blank" rel="noopener">github.com/faris0x</a></li>
+        <li><span>Discord</span><span class="handle"><span class="handle-text">@faris0x</span><button class="copy-btn" type="button" data-copy>Copy</button></span></li>
+        <li><span>Location</span>Greater Manchester, UK</li>
       </ul>
 
       <footer class="foot">
-        <p>Built by hand — no framework, no build step, one stylesheet.</p>
-        <p><a href="https://github.com/guilyx/v2" target="_blank" rel="noopener">Source on GitHub</a></p>
+        <p class="eq" id="eq" role="img" aria-label="Time-dependent Schrödinger equation: i ħ ∂ over ∂t of ket psi equals H-hat ket psi"></p>
+        <p><a href="https://github.com/faris0x" target="_blank" rel="noopener">Source on GitHub</a></p>
       </footer>
     </section>
 
   </main>
 </div>
 
+<div class="discord-pop" id="discord-pop" role="dialog" aria-label="Discord handle" hidden>
+  <span class="discord-pop-handle" id="discord-handle">@faris0x</span>
+  <button class="discord-pop-copy" id="discord-copy" type="button" aria-live="polite">Copy</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script>
+  katex.render('i\\hbar\\dfrac{\\partial}{\\partial t}|\\psi\\rangle = \\hat H|\\psi\\rangle', document.getElementById('eq'));
+</script>
 <script src="js/main.js" defer></script>
 </body>
 </html>

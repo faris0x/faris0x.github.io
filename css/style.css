@@ -199,6 +199,92 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .social a { font-size: .8rem; color: var(--fg-faint); }
 .social a:hover { color: var(--accent); }
 
+.social .discord-link {
+  display: flex;
+  align-items: baseline;
+  gap: .7rem;
+  padding: .5rem .7rem;
+  border-radius: 7px;
+  border-left: 2px solid transparent;
+  font-weight: 500;
+  font-size: .8rem;
+  font-family: var(--sans);
+  color: var(--fg-faint);
+  transition: color .18s var(--ease), background .18s var(--ease), border-color .18s var(--ease);
+}
+.social .discord-link:hover { color: var(--accent); background: var(--line-soft); }
+
+.discord-link {
+  font: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.handle { display: inline-flex; justify-content: flex-start; align-items: center; gap: .6rem; }
+.handle-text { font-size: .93rem; color: var(--fg); }
+.copy-btn {
+  font: inherit;
+  font-size: .72rem;
+  line-height: 1.4;
+  width: 4rem;
+  text-align: center;
+  padding: .15rem .6rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--fg-dim);
+  cursor: pointer;
+  transition: border-color .18s var(--ease), color .18s var(--ease), background .18s var(--ease);
+}
+.copy-btn:hover,
+.copy-btn.is-copied { border-color: var(--accent); color: var(--accent); }
+.copy-btn.is-copied { background: var(--accent-soft); }
+
+.discord-pop {
+  position: fixed;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .55rem .7rem .6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, .28);
+  font-size: .85rem;
+}
+.discord-pop[hidden] { display: none; }
+.discord-pop::before,
+.discord-pop::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  pointer-events: none;
+}
+.discord-pop::before { margin-left: -9px; border-width: 9px; border-top-color: var(--line); }
+.discord-pop::after  { margin-left: -8px; border-width: 8px; border-top-color: var(--bg-card); }
+.discord-pop-handle { font-family: var(--mono); font-size: .8rem; color: var(--fg); }
+.discord-pop-copy {
+  font: inherit;
+  font-size: .75rem;
+  width: 4.1rem;
+  text-align: center;
+  padding: .3rem .7rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--fg-dim);
+  cursor: pointer;
+  transition: border-color .18s var(--ease), color .18s var(--ease), background .18s var(--ease);
+}
+.discord-pop-copy:hover,
+.discord-pop-copy.is-copied { border-color: var(--accent); color: var(--accent); }
+.discord-pop-copy.is-copied { background: var(--accent-soft); }
+
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -536,7 +622,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   font-size: .93rem;
 }
 .contact li:first-child { border-top: 0; }
-.contact span { font-family: var(--mono); font-size: .74rem; color: var(--fg-faint); padding-top: .18rem; }
+.contact li > span:first-child { font-family: var(--mono); font-size: .74rem; color: var(--fg-faint); padding-top: .18rem; }
 
 .foot {
   margin-top: 4rem;
@@ -548,6 +634,13 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   gap: .5rem;
 }
 .foot p { margin: 0; font-size: .78rem; color: var(--fg-faint); }
+
+/* Schrödinger equation, rendered by KaTeX with its bundled Computer
+   Modern fonts. Slightly larger than the surrounding footer text. */
+.foot .eq {
+  font-size: 0.9315rem;
+  line-height: 1;
+}
 
 /* ---------- responsive ---------- */
 

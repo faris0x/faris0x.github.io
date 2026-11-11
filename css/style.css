@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Hubot Sans';
+  src: url('../fonts/hubot-sans-latin.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ============================================================
    Erwin Lejeune — portfolio v2
    Hand-written. No framework, no build step.
@@ -16,11 +24,11 @@
 /* ---------- tokens ---------- */
 
 :root {
-  --bg:        #0d0e12;   /* brand: color.bg       */
-  --bg-soft:   #15171d;   /* brand: color.bgRaised */
-  --bg-card:   #15171d;   /* brand: color.surface  */
-  --line:      #252833;   /* brand: color.line     */
-  --line-soft: #1b1e26;   /* derived: between surface and line, for quiet rules */
+  --bg:        #000000;   /* AMOLED black */
+  --bg-soft:   #070709;   /* brand: color.bgRaised */
+  --bg-card:   #0a0a0d;   /* brand: color.surface  */
+  --line:      #202028;   /* brand: color.line     */
+  --line-soft: #131317;   /* derived: between surface and line, for quiet rules */
 
   --fg:        #e4e6ec;   /* brand: color.heading */
   --fg-dim:    #a5aab8;   /* brand: color.body    */
@@ -29,10 +37,10 @@
   /* color.faint (#555b69) is deliberately unused: it is documented as
      labels >= 14px only, and every mono key here sits around 11px. */
 
-  --accent:      #8b95f0;                    /* brand: color.accent     */
-  --accent-soft: rgba(139, 149, 240, .08);   /* brand: color.accentSoft */
+  --accent:      #b8a6f8;                    /* lavender accent         */
+  --accent-soft: rgba(184, 166, 248, .12);   /* brand: color.accentSoft */
 
-  --sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --sans: 'Hubot Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   /* Brand mono is JetBrains Mono, but the shipped lockup SVG itself lists
      ui-monospace first, so the system face is on-brand and costs nothing. */
   --mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
@@ -121,7 +129,7 @@ i.devicon-neovim-line.colored {
 
 .skip-link {
   position: absolute;
-  left: -9999px;
+  inset-inline-start: -9999px;
   top: 0;
   z-index: 100;
   padding: .6rem 1rem;
@@ -129,7 +137,7 @@ i.devicon-neovim-line.colored {
   color: var(--bg);
   font-weight: 700;
 }
-.skip-link:focus { left: 0; }
+.skip-link:focus { inset-inline-start: 0; }
 
 /* ---------- shell ---------- */
 
@@ -164,17 +172,13 @@ i.devicon-neovim-line.colored {
 .brand { display: flex; align-items: center; gap: .8rem; color: inherit; }
 .brand:hover { text-decoration: none; }
 
-/* The swarm mark, inlined so currentColor resolves against the page.
-   Rotation is 120deg about the centroid (16, 16.833) - the only interval
-   at which the mark lands back on itself. */
 .brand-mark {
   flex: none;
-  width: 34px; height: 34px;
-  color: var(--accent);
-  transform-origin: 16px 16.833px;
-  transition: transform .5s cubic-bezier(.645, .045, .355, 1);
+  width: 34px;
+  height: 34px;
+  border-radius: 7px;
+  object-fit: cover;
 }
-.brand:hover .brand-mark { transform: rotate(120deg); }
 
 .brand-text { display: flex; flex-direction: column; line-height: 1.3; }
 .brand-text b { font-size: .95rem; }
@@ -193,8 +197,7 @@ i.devicon-neovim-line.colored {
   color: var(--fg-dim);
   font-size: .92rem;
   font-weight: 500;
-  border-left: 2px solid transparent;
-  transition: color .18s var(--ease), background .18s var(--ease), border-color .18s var(--ease);
+  transition: color .18s var(--ease), background .18s var(--ease);
 }
 .nav a:hover { color: var(--fg); background: var(--line-soft); text-decoration: none; }
 
@@ -209,7 +212,6 @@ i.devicon-neovim-line.colored {
 .nav a.is-current {
   color: var(--accent);
   background: var(--accent-soft);
-  border-left-color: var(--accent);
 }
 .nav a.is-current i { color: var(--accent); }
 
@@ -335,6 +337,59 @@ i.devicon-neovim-line.colored {
   background: var(--accent);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.prefs { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; }
+
+.lang-field { display: inline-flex; }
+
+.lang-field select {
+  padding: .35rem 1.55rem .35rem .7rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--fg-faint);
+  font: inherit;
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+
+.lang-field select:hover { border-color: var(--accent); color: var(--fg); }
+
+html[lang='ar'] body {
+  /* Hubot Sans carries the Latin text; Almarai is only reached for Arabic
+     codepoints that Hubot does not cover. */
+  font-family: 'Hubot Sans', 'Almarai', 'Noto Naskh Arabic',
+    'Noto Sans Arabic', 'Amiri', 'Geeza Pro', 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.95;
+}
+
+html[lang='ar'] h1,
+html[lang='ar'] h2,
+html[lang='ar'] h3 {
+  line-height: 1.32;
+}
+
+html[dir='rtl'] .sidebar { border-right: 0; border-left: 1px solid var(--line); }
+
+html[dir='rtl'] .katex,
+html[dir='rtl'] code,
+html[dir='rtl'] pre,
+html[dir='rtl'] .eq {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 .nav-toggle { display: none; }
 
 /* ---------- main ---------- */
@@ -348,6 +403,63 @@ i.devicon-neovim-line.colored {
 
 .section { padding: clamp(3rem, 6vw, 4.5rem) 0; border-bottom: 1px solid var(--line-soft); }
 .section:last-child { border-bottom: 0; }
+
+.lab-band {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 0 0 clamp(3rem, 6vw, 4.5rem);
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.lab-band h2 {
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  margin: 0 0 .55rem;
+}
+
+.lab-band p {
+  margin: 0;
+  color: var(--fg-dim);
+  max-width: 46rem;
+}
+
+.lab-band .eyebrow {
+  margin-bottom: .5rem;
+}
+
+.lab-domain {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .3rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.lab-domain-dot {
+  font-family: var(--mono);
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.lab-domain-tld {
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 400;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+.lab-band-btn {
+  flex: none;
+  font-size: 1rem;
+  padding: .8rem 1.4rem;
+}
 
 .section-title {
   display: flex;
@@ -660,6 +772,24 @@ i.devicon-neovim-line.colored {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: .5rem;
+}
+
+.foot-legal {
+  flex-basis: 100%;
+  margin-top: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line-soft);
+  color: var(--fg-faint);
+  font-size: .72rem;
+  line-height: 1.6;
+}
+
+.foot-legal p {
+  margin: 0 0 .4rem;
+}
+
+.foot-legal p:last-child {
+  margin-bottom: 0;
 }
 .foot p { margin: 0; font-size: .78rem; color: var(--fg-faint); }
 

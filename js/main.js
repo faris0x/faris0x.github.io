@@ -16,11 +16,16 @@
 
   function paintTheme(theme) {
     root.dataset.theme = theme;
-    if (themeLabel) themeLabel.textContent = theme === 'dark' ? 'Dark' : 'Light';
+    if (themeLabel) {
+      var ar = document.documentElement.lang === 'ar';
+      themeLabel.textContent = theme === 'dark'
+        ? (ar ? 'داكن' : 'Dark')
+        : (ar ? 'فاتح' : 'Light');
+    }
     if (themeBtn) themeBtn.setAttribute('aria-pressed', String(theme === 'light'));
 
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0d0e12' : '#f4ead1');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#000000' : '#f4ead1');
   }
 
   paintTheme(root.dataset.theme === 'light' ? 'light' : 'dark');
@@ -101,38 +106,15 @@
     syncSpy();
   }
 
-  /* ---------- project filters ---------- */
-
-  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip[data-filter]'));
-  var cards = Array.prototype.slice.call(document.querySelectorAll('#project-grid .card'));
-  var empty = document.getElementById('grid-empty');
-
-  if (chips.length && cards.length) {
-    chips.forEach(function (chip) {
-      chip.addEventListener('click', function () {
-        var want = chip.dataset.filter;
-        var shown = 0;
-
-        chips.forEach(function (c) { c.classList.toggle('is-active', c === chip); });
-
-        cards.forEach(function (card) {
-          var match = want === 'all' || card.dataset.cat === want;
-          card.hidden = !match;
-          if (match) shown++;
-        });
-
-        if (empty) empty.hidden = shown > 0;
-      });
-    });
-  }
-
   /* ---------- discord copy ---------- */
 
   function copyText(t, btn, doneLabel) {
     function done() {
       if (btn) {
         var old = btn.textContent;
-        btn.textContent = doneLabel || 'Copied';
+        var language = document.documentElement.lang;
+        btn.textContent =
+          doneLabel || (language === 'ar' ? 'تم النسخ' : 'Copied');
         btn.classList.add('is-copied');
         setTimeout(function () {
           btn.textContent = old;
@@ -186,7 +168,8 @@
     dPop.hidden = false;
     dPosition(anchor);
     if (dCopy) {
-      dCopy.textContent = 'Copy';
+      dCopy.textContent =
+        document.documentElement.lang === 'ar' ? 'نسخ' : 'Copy';
       dCopy.classList.remove('is-copied');
     }
   }

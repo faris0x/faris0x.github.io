@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Hubot Sans';
-  src: url('../fonts/hubot-sans-latin.woff2') format('woff2-variations');
+  src: url('../fonts/hubot-sans-latin.woff2?v=20261111') format('woff2-variations');
   font-weight: 200 900;
   font-style: normal;
   font-display: swap;
